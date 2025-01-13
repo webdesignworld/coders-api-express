@@ -1,6 +1,8 @@
 const express = require("express");
 const port = process.env.PORT || 8000;
 const authRoutes = require('./routes/authRoutes')
+const challengeRoutes = require('./routes/challengeRoutes'); 
+
 // const cors = require('cors');
 
 // app.use(cors());
@@ -15,5 +17,7 @@ app.use(express.json());
 // Mount authentication routes
 app.use('/auth', authRoutes);
 
+// Mount challenge routes
+app.use('/challenges', challengeRoutes);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
