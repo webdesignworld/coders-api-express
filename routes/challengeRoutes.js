@@ -9,9 +9,11 @@ const {
 
 const router = express.Router();
 
-router.post('/', createChallenge);
-router.get('/', getAllChallenges);
-router.get('/:id', getChallengeById);
+router.post('/', createChallenge); //1. challenge creation
+router.get('/', getAllChallenges); //3. challenge listing
+router.get('/:id', getChallengeById); //4. challenge listing by id
+
+
 router.put('/:id', updateChallenge);
 router.delete('/:id', deleteChallenge);
 

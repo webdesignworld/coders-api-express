@@ -13,7 +13,7 @@ const mockDatabase = {
         const newChallenge = {
             id: Date.now().toString(),
             title,
-            category,
+            category, //filter
             description,
             level,
             code,
@@ -24,9 +24,9 @@ const mockDatabase = {
         res.status(201).json({ message: 'Challenge created successfully!', challenge: newChallenge });
     };
     
-    // Get all challenges
+    // Get all challenges for 3. challenge listing
     const getAllChallenges = (req, res) => {
-        const { category } = req.query;
+        const { category } = req.query; // to accept category query to filter by categ
     
         if (category) {
             const filteredChallenges = mockDatabase.challenges.filter(
@@ -38,7 +38,7 @@ const mockDatabase = {
         res.status(200).json(mockDatabase.challenges);
     };
     
-    // Get achallenge by id
+    // Get achallenge by id 4. 
     const getChallengeById = (req, res) => {
         const { id } = req.params;
         const challenge = mockDatabase.challenges.find(challenge => challenge.id === id);
