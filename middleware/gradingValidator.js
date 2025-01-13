@@ -14,7 +14,7 @@ const validateSubmission = (req, res, next) => {
         return res.status(400).json({ message: 'Invalid submission data', details: error.details });
     }
 
-    next();
+    next(); //if valid passes
 };
 
 module.exports = {

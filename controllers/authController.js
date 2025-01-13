@@ -1,9 +1,9 @@
 const mockDatabase = {
     coders: [
-        { id: '1', email: 'coder@example.com', password: 'securepassword', firstName: 'Svetlana', lastName: 'Delaney', about: 'bio', role: 'Coder' },
+        { id: '1', email: 'coder@example.com', password: 'securepassword', firstName: 'Laura', lastName: 'D', about: 'bio', role: 'Coder' },
     ],
     managers: [
-        { id: '1', email: 'manager@example.com', password: 'verysecurepassword', firstName: 'Nico', lastName: 'Delaney', about: 'bio', role: 'Manager' },
+        { id: '1', email: 'manager@example.com', password: 'verysecurepassword', firstName: 'Frank', lastName: 'D', about: 'bio', role: 'Manager' },
     ],
 };
 
